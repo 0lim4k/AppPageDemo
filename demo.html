@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo de Escáner de QR/Códigos de Barras</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+    }
+    .gradient-header {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    }
+    .feature-card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    .screenshot-img {
+      transition: transform 0.3s ease;
+    }
+    .screenshot-img:hover {
+      transform: scale(1.05);
+    }
+    .download-btn {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .download-btn:hover {
+      background-color: #1e40af;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <!-- Encabezado -->
+  <header class="gradient-header text-white py-12">
+    <div class="container mx-auto text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Escáner de QR/Códigos de Barras</h1>
+      <p class="text-lg md:text-xl mt-3 max-w-2xl mx-auto">¡Escanea códigos QR y de barras con facilidad y guarda los resultados como contactos en un instante!</p>
+    </div>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container mx-auto py-12 px-4">
+    <!-- Sobre la Aplicación -->
+    <section class="mb-16 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sobre la Aplicación</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Escáner de QR/Códigos de Barras es una aplicación Flutter intuitiva que permite escanear códigos QR y de barras usando la cámara de tu dispositivo. Guarda los datos escaneados directamente en tus contactos con un solo toque. ¡Perfecta para capturar datos rápidamente y gestionar contactos de manera eficiente!
+      </p>
+    </section>
+
+    <!-- Características -->
+    <section class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Características Principales</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
+          <i class="fas fa-qrcode text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Escaneo Rápido</h3>
+          <p class="text-gray-600 text-base">Escanea códigos QR y de barras en tiempo real con alta precisión.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
+          <i class="fas fa-address-book text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Guardar en Contactos</h3>
+          <p class="text-gray-600 text-base">Guarda los datos escaneados como contactos en tu dispositivo con un clic.</p>
+        </div>
+        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
+          <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Interfaz Amigable</h3>
+          <p class="text-gray-600 text-base">Diseño limpio e intuitivo para una experiencia de usuario fluida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capturas de Pantalla -->
+    <section class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Capturas de Pantalla</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white p-4 rounded-xl shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x600?text=Interfaz+de+Escaneo"
+            alt="Interfaz de Escaneo"
+            class="screenshot-img w-full h-auto rounded-lg"
+          />
+          <p class="text-center mt-3 text-gray-600 text-base">Interfaz de Escaneo</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x600?text=Resultado+del+Escaneo"
+            alt="Resultado del Escaneo"
+            class="screenshot-img w-full h-auto rounded-lg"
+          />
+          <p class="text-center mt-3 text-gray-600 text-base">Resultado del Escaneo</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-lg overflow-hidden">
+          <img
+            src="https://via.placeholder.com/300x600?text=Guardar+Contacto"
+            alt="Guardar Contacto"
+            class="screenshot-img w-full h-auto rounded-lg"
+          />
+          <p class="text-center mt-3 text-gray-600 text-base">Guardar en Contactos</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección de Descarga -->
+    <section class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Obtén la Aplicación</h2>
+      <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+        ¡Descarga Escáner de QR/Códigos de Barras desde Huawei AppGallery y comienza a escanear hoy mismo!
+      </p>
+      <a
+        href="https://appgallery.huawei.com/"
+        class="download-btn inline-block bg-blue-600 text-white py-3 px-8 rounded-xl text-lg font-semibold shadow-md"
+      >
+        Descargar Ahora
+      </a>
+    </section>
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto text-center px-4">
+      <p class="text-base">&copy; 2025 Escáner de QR/Códigos de Barras. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
