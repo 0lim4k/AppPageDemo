@@ -6,116 +6,145 @@
   <title>Demo de Escáner de QR/Códigos de Barras</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Inter', Arial, sans-serif;
+      font-family: 'Poppins', Arial, sans-serif;
+      background: linear-gradient(to bottom, #f1f5f9 0%, #e6f3f8 100%);
     }
     .gradient-header {
-      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      background: linear-gradient(135deg, #0d9488 0%, #38bdf8 100%);
     }
     .feature-card {
+      background: linear-gradient(145deg, #ffffff, #e6f3f8);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .feature-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
     }
     .screenshot-img {
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .screenshot-img:hover {
       transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
     .download-btn {
       transition: background-color 0.3s ease, transform 0.2s ease;
     }
     .download-btn:hover {
-      background-color: #1e40af;
-      transform: scale(1.05);
+      background-color: #0d9488;
+      transform: scale(1.1);
+    }
+    .privacy-section {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
   </style>
 </head>
-<body class="min-h-screen bg-gray-50">
+<body class="min-h-screen">
   <!-- Encabezado -->
-  <header class="gradient-header text-white py-12">
+  <header class="gradient-header text-white py-16">
     <div class="container mx-auto text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Escáner de QR/Códigos de Barras</h1>
-      <p class="text-lg md:text-xl mt-3 max-w-2xl mx-auto">¡Escanea códigos QR y de barras con facilidad y guarda los resultados como contactos en un instante!</p>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight">Escáner de QR/Códigos de Barras</h1>
+      <p class="text-lg md:text-xl mt-4 max-w-3xl mx-auto">¡Escanea códigos QR y de barras con facilidad y guarda los resultados como contactos en un instante!</p>
     </div>
   </header>
 
   <!-- Contenido Principal -->
-  <main class="container mx-auto py-12 px-4">
+  <main class="container mx-auto py-16 px-4">
     <!-- Sobre la Aplicación -->
-    <section class="mb-16 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sobre la Aplicación</h2>
+    <section class="mb-20 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Sobre la Aplicación</h2>
       <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-        Escáner de QR/Códigos de Barras es una aplicación Flutter intuitiva que permite escanear códigos QR y de barras usando la cámara de tu dispositivo. Guarda los datos escaneados directamente en tus contactos con un solo toque. ¡Perfecta para capturar datos rápidamente y gestionar contactos de manera eficiente!
+        Escáner de QR/Códigos de Barras es una aplicación Flutter intuitiva que te permite escanear códigos QR y de barras con la cámara de tu dispositivo. Guarda los datos escaneados directamente en tus contactos con un solo toque. ¡Perfecta para capturar datos rápidamente y gestionar contactos de manera eficiente!
       </p>
     </section>
 
     <!-- Características -->
-    <section class="mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Características Principales</h2>
+    <section class="mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">Características Principales</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
-          <i class="fas fa-qrcode text-4xl text-blue-600 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Escaneo Rápido</h3>
+        <div class="feature-card p-8 rounded-2xl text-center">
+          <i class="fas fa-qrcode text-5xl text-teal-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Escaneo Rápido</h3>
           <p class="text-gray-600 text-base">Escanea códigos QR y de barras en tiempo real con alta precisión.</p>
         </div>
-        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
-          <i class="fas fa-address-book text-4xl text-blue-600 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Guardar en Contactos</h3>
+        <div class="feature-card p-8 rounded-2xl text-center">
+          <i class="fas fa-address-book text-5xl text-teal-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Guardar en Contactos</h3>
           <p class="text-gray-600 text-base">Guarda los datos escaneados como contactos en tu dispositivo con un clic.</p>
         </div>
-        <div class="feature-card bg-white p-6 rounded-xl shadow-lg text-center">
-          <i class="fas fa-mobile-alt text-4xl text-blue-600 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 mb-2">Interfaz Amigable</h3>
+        <div class="feature-card p-8 rounded-2xl text-center">
+          <i class="fas fa-mobile-alt text-5xl text-teal-600 mb-4"></i>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3">Interfaz Amigable</h3>
           <p class="text-gray-600 text-base">Diseño limpio e intuitivo para una experiencia de usuario fluida.</p>
         </div>
       </div>
     </section>
 
     <!-- Capturas de Pantalla -->
-    <section class="mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Capturas de Pantalla</h2>
+    <section class="mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">Capturas de Pantalla</h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-white p-4 rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white p-6 rounded-2xl shadow-lg overflow-hidden">
           <img
             src="https://via.placeholder.com/300x600?text=Interfaz+de+Escaneo"
             alt="Interfaz de Escaneo"
             class="screenshot-img w-full h-auto rounded-lg"
           />
-          <p class="text-center mt-3 text-gray-600 text-base">Interfaz de Escaneo</p>
+          <p class="text-center mt-4 text-gray-600 text-base">Interfaz de Escaneo</p>
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white p-6 rounded-2xl shadow-lg overflow-hidden">
           <img
             src="https://via.placeholder.com/300x600?text=Resultado+del+Escaneo"
             alt="Resultado del Escaneo"
             class="screenshot-img w-full h-auto rounded-lg"
           />
-          <p class="text-center mt-3 text-gray-600 text-base">Resultado del Escaneo</p>
+          <p class="text-center mt-4 text-gray-600 text-base">Resultado del Escaneo</p>
         </div>
-        <div class="bg-white p-4 rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-white p-6 rounded-2xl shadow-lg overflow-hidden">
           <img
             src="https://via.placeholder.com/300x600?text=Guardar+Contacto"
             alt="Guardar Contacto"
             class="screenshot-img w-full h-auto rounded-lg"
           />
-          <p class="text-center mt-3 text-gray-600 text-base">Guardar en Contactos</p>
+          <p class="text-center mt-4 text-gray-600 text-base">Guardar en Contactos</p>
         </div>
       </div>
     </section>
 
+    <!-- Política de Privacidad -->
+    <section class="mb-20 privacy-section p-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Política de Privacidad</h2>
+      <div class="text-gray-600 text-base leading-relaxed max-w-4xl mx-auto">
+        <p class="mb-4">
+          En Escáner de QR/Códigos de Barras, valoramos tu privacidad. Esta política describe cómo manejamos tus datos:
+        </p>
+        <ul class="list-disc list-inside space-y-2">
+          <li><strong>Permisos</strong>: La aplicación solicita acceso a la cámara para escanear códigos QR y de barras, y a los contactos para guardar datos escaneados (como números de teléfono) en tu dispositivo.</li>
+          <li><strong>Datos Recolectados</strong>: Solo procesamos los datos escaneados de los códigos QR o de barras, los cuales son almacenados localmente en tu dispositivo si eliges guardarlos como contactos.</li>
+          <li><strong>Almacenamiento</strong>: No almacenamos ni compartimos datos escaneados con terceros. Todos los datos permanecen en tu dispositivo.</li>
+          <li><strong>Seguridad</strong>: Implementamos medidas para proteger los datos procesados localmente, asegurando que solo tú tengas acceso a ellos.</li>
+          <li><strong>Contacto</strong>: Si tienes preguntas sobre esta política, contáctanos en <a href="mailto:support@example.com" class="text-teal-600 hover:underline">support@example.com</a>.</li>
+        </ul>
+        <p class="mt-4">
+          Nos reservamos el derecho de actualizar esta política. Revisa esta sección periódicamente para estar al tanto de cualquier cambio.
+        </p>
+      </div>
+    </section>
+
     <!-- Sección de Descarga -->
-    <section class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Obtén la Aplicación</h2>
-      <p class="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+    <section class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Obtén la Aplicación</h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
         ¡Descarga Escáner de QR/Códigos de Barras desde Huawei AppGallery y comienza a escanear hoy mismo!
       </p>
       <a
         href="https://appgallery.huawei.com/"
-        class="download-btn inline-block bg-blue-600 text-white py-3 px-8 rounded-xl text-lg font-semibold shadow-md"
+        class="download-btn inline-block bg-teal-600 text-white py-4 px-10 rounded-xl text-lg font-semibold shadow-lg"
       >
         Descargar Ahora
       </a>
@@ -123,7 +152,7 @@
   </main>
 
   <!-- Pie de Página -->
-  <footer class="bg-gray-900 text-white py-8">
+  <footer class="bg-gray-900 text-white py-10">
     <div class="container mx-auto text-center px-4">
       <p class="text-base">&copy; 2025 Escáner de QR/Códigos de Barras. Todos los derechos reservados.</p>
     </div>
